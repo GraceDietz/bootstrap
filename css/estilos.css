@@ -1,0 +1,775 @@
+/*este es el ultimo css que esta revisado ok*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Nunito:wght@200;300;400;500;700&display=swap');
+
+/*como colocar una fuente descargada*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/font/Montserrat-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*estilo de fonts para todo el boby*/
+body {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+/*estilo de font para todos los h*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', cursive;
+}
+
+/*tamaño para el header  padre de cajaheader y de la section  laConfe*/
+.header {
+  width: 100%;
+  height: 100%;
+
+
+}
+
+/* Primer hijo de header --> CajaHeader es el padre de contenedorLogo img a  h2 y menu de navegacion*/
+.cajaHeader {
+
+  position: sticky;
+  /*para que quede fijado en la parte superior de la pantalla*/
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  /*su ancho */
+  height: 15%;
+  /*su alto*/
+  background-color: #212529;
+  /*
+  background-color: rgba(53, 58, 64, 1);*/
+  /*su color de fondo*/
+  display: flex;
+  /*para que sea un contenedor flexible*/
+  flex-direction: row;
+  /*para que coloque sus hijos en fila*/
+  justify-content: space-between;
+  /*para que los dos contenedores hijos esten separados entre ellos*/
+
+
+}
+
+/*Este contenedor es hijo de header y contiene el logo y el h2*/
+.contenedorLogo {
+
+  width: 30%;
+  /*cocupa el 30% de su padre header en ancho*/
+  display: flex;
+  /* es un contenedor flexible para contener a sus dos hijos img h2 y es flex row*/
+  align-items: center;
+  /*para centrar los elementos */
+  padding-left: 5rem;
+  /*para que tenga un padding izquierdo de 5 rem y no se pegue a la izquierda */
+}
+
+.contenedorLogo img {
+  width: 150px;
+  /*ancho que ocupa el logo*/
+  object-fit: cover;
+  /*para mantener la imagen proporcionada y que se ajuste sin deformarse*/
+}
+
+/* estilado titulo h2 a lado del logo*/
+.contenedorLogo h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  margin-left: 1rem;
+
+}
+
+/* Navegacion es padre de listaNav*/
+.navegacion {
+  display: flex;
+  /*padre flexible*/
+  width: 60%;
+  /*ancho que ocupara de header*/
+
+
+}
+
+/*EStilado para el menu de navegacion*/
+.listaNav {
+  width: 100%;
+  /*ancho que ocupara de su padre navegacion*/
+  display: flex;
+  /*es un contenedor flexible*/
+  align-items: center;
+  /*para centrar verticalmente */
+  justify-content: space-around;
+  /*para espaciar cada <a> */
+  list-style: none;
+  /*que no tenga estilo cada item */
+  padding-right: 5rem;
+  /*para tener espacio desde la derecha de la pantalla*/
+}
+
+/*estilado para las <a>*/
+.linkNav {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+
+}
+
+/* a verde del menu de navegacion last-child*/
+.linkNavVerde {
+  font-size: 14px;
+  text-decoration: none;
+  color: #27a844;
+}
+
+
+/* Segundo hijo del header--> section laConfe con h1 parrafo y dos botones (quiero ser orador) y comprar tickets*/
+.laConfe {
+  height: 90%;
+  /*para oscurecer la imagen de fondo utilizamos linear-gradient*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/img/ba1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+
+}
+
+
+/*confeBsAs padre de confeBsAs parrafoconferencia y bnt orador , comprar tickets*/
+.confeBsAs {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* para que los hijos se muestren uno debajo del otro(h1,p y botones)*/
+  justify-content: flex-end;
+  /*para que se justifiquen al extremo derecho del contenedor*/
+
+  color: white;
+  padding: 5rem;
+  margin-top: 8rem;
+
+}
+
+/*estilado h1 hijo de confeBsAs*/
+.confeBsAs h1 {
+
+  text-align: right;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+
+}
+
+/*estilado parrafo hijo de confeBsAs*/
+.confeBsAs p {
+
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: right;
+  font-size: 16px;
+
+}
+
+/*caja botones para ayudar a posicionar los 2 botones con flex*/
+.confeBsAsBotones {
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+
+}
+
+/*estilado boton queres ser orador*/
+.btnOrador {
+  border: 1px solid white;
+  color: white;
+
+  padding: 1.5%;
+  background-color: transparent;
+  font-family: "Roboto mono", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 1rem;
+
+
+}
+
+/*estilado boton comprar ticket*/
+.btnTickets {
+
+  padding: 1.5%;
+  color: white;
+  background-color: #27a944;
+  font-family: "Roboto mono", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 1rem;
+
+
+}
+
+/* contenedor padre Oradores Secccion de Oradores con las tres cards
+    hijos-->  h2 y contenedorGrid  */
+.Oradores {
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Oradores h2 {
+  text-align: center;
+}
+
+.h2conoce {
+  font-size: 14px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+
+}
+
+.h2oradores {
+
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+
+/* estilado para contenedor de las 3 cards */
+.contenedorGrid {
+
+  height: auto;
+  margin: 0 auto;
+  gap: 10px;
+  padding-bottom: 2rem;
+
+}
+
+/*estilado para contenedor de de cada card , padre de img h4 h3  java reac negocios startup*/
+.gridCard {
+  width: 300px;
+
+}
+
+.gridCard img {
+
+
+  width: 300px;
+  height: 300px;
+
+  object-fit: cover;
+
+}
+
+.gridCard h4 {
+
+  margin-top: 1rem;
+}
+
+.gridCard h5 {
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+
+
+}
+
+.gridCard p {
+  margin: 0.5rem 1rem;
+  color: grey;
+  font-size: 12px;
+
+
+}
+
+/*estilado card titulo java*/
+
+.java {
+
+  font-size: 10px;
+  background-color: rgb(241, 241, 15);
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 1rem;
+  padding: 1%;
+
+}
+
+/*estilado card titulo React*/
+.react {
+
+  font-size: 10px;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(13, 168, 240);
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 5px;
+  padding: 1%;
+
+}
+
+/*estilado card titulo Negocios*/
+.negocios {
+  font-size: 10px;
+  background-color: rgb(66, 66, 63);
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+  margin-left: 1rem;
+  padding: 1%;
+
+}
+
+/*estilado card titulo Startup*/
+.start {
+  font-size: 10px;
+  background-color: rgb(240, 20, 166);
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+  margin-left: 4px;
+  padding: 1%;
+}
+
+
+/*ESTILADO CSS BOOSTRAP HECHO EN CLASE*/
+/*columna izquierda imagen */
+
+.lugarYfecha {
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 1rem;
+}
+
+.columnaIzquierda {
+  width: 70%;
+  height: 80vh;
+  background-color: rgb(55, 55, 59);
+}
+
+.carousel-item img {
+  height: 80vh;
+  object-fit: cover;
+}
+
+/*columna derecha titulo parrafo y boton conoce mas*/
+.columnaDerecha {
+  width:30% ;
+  height: 80vh;
+  background-color: rgb(55, 55, 59);
+  color: white;
+  font-size: 14px;
+
+}
+
+.btnconoceMas {
+  border: 0.5px solid white;
+  padding: 1%;
+  background-color: transparent;
+  font-family: "Roboto mono", sans-serif;
+  color: white;
+  text-align: right;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+/*-------------------------Estilado seccion formulario de inscripcion para ser Orador*/
+.formulario1 {
+  width: 50%;
+  height: auto;
+
+
+
+
+}
+
+.formulario1 h2 {
+  /*estilo  para el titulo h2*/
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.formPrf {
+  /*clase del titulo*/
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 12px;
+}
+
+.dots {
+  /*clase para los puntos */
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.textArea {
+  height: 6rem;
+
+}
+
+
+
+
+.pCharla {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btnVerde {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #96C93E;
+  border: 1px solid #96C93E;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+}
+
+
+/*-----------------Estilados para footer ------------*************/
+.navFooter {
+
+  background: linear-gradient(to right, #1d3947, #1d4962, #1e5372);
+  width: 100%;
+  padding: 1rem;
+
+}
+
+.navFooter ul {
+  width: 60%;
+}
+
+.linkNavFooter {
+  text-decoration: none;
+  color: white;
+   font-size: 12px;
+
+}
+
+
+/*----------------------------FIN CSS PARA DESKTOP-----------------------------*/
+
+/*------------------------------- Estilado pantallas menor a 319px NO MUESTRA NADA*/
+@media screen and (max-width:319px) {
+  * {
+    display: none;
+  }
+}
+
+
+
+/*--------------- ESTILADOS PARA CELULARES  hasta 768px---------------------*/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+
+
+  .cajaHeader {
+    position: unset;
+    height: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .contenedorLogo {
+
+    width: 100%;
+    /*
+    padding: 2rem;*/
+    padding:0;
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    /*border-bottom: 2px solid white;*/
+
+  }
+
+  .contenedorLogo h2 {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .laConfe {
+    max-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    /*para oscurecer la imagen de fondo utilizamos linear-gradient*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+      url("../assets/img/puentedelamujer.jpg");
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .confeBsAs {
+    width: 90%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+
+
+  }
+
+  .confeBsAs h1 {
+    text-align: center;
+    padding: 0;
+
+  }
+
+  .confeBsAs p {
+    padding: 0.5rem;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 12px;
+
+  }
+
+  .confeBsAsBotones {
+    justify-content: space-around;
+
+  }
+
+  .btnOrador {
+    margin: 0;
+  }
+
+  .btnTickets {
+    margin: 0;
+  }
+
+
+  /*--------------------estilado de section lugay y fecha para celular------*/
+
+  .lugarYfecha {
+    height: 100vh;
+    position: relative;
+  }
+    .carousel-item img {
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .columnaIzquierda {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+
+    .columnaDerecha {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      background-color: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(83, 74, 74, 0.73);
+      background: linear-gradient(90deg, rgba(83, 74, 74, 0.73) 0%, rgba(37, 35, 35, 0.52) 80%);
+      background: -webkit-linear-gradient(90deg, rgba(83, 74, 74, 0.73) 0%, rgba(37, 35, 35, 0.52) 80%);
+      background: -moz-linear-gradient(90deg, rgba(83, 74, 74, 0.73) 0%, rgba(37, 35, 35, 0.52) 80%);
+      font-size: 14px;
+    }
+
+   
+    .formulario1 {
+      margin-top: 1rem;
+      width: 90%;
+      /*width: 70%;*/
+      height: auto;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      text-align: center;
+
+
+    }
+    .navFooter ul {
+      text-align: center;
+      font-size:14px;
+    }
+
+  }
+
+  /*************************************************************************************/
+  /*---------------------EStilado para dispositivos tipo tablets----------------------*/
+  @media screen and (min-width : 769px)and (max-width :1199px) {
+
+
+    .cajaHeader {
+      width: 100%;
+      position: unset;
+      max-height: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+
+    .contenedorLogo {
+
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+
+    }
+
+    .contenedorLogo h2 {
+      padding: 0;
+      margin: 0;
+    }
+
+
+    .laConfe {
+      width: 100%;
+      height: 90vh;
+      background-size: cover;
+      /*para oscurecer la imagen de fondo utilizamos linear-gradient*/
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+        url("../assets/img/puentedelamujer.jpg");
+      display: flex;
+      align-items: center;
+
+    }
+
+    .confeBsAs {
+      width: 80%;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 1.5rem;
+
+
+    }
+
+    .confeBsAs h1 {
+      padding: 0;
+
+    }
+
+    .confeBsAs p {
+      line-height: 1.5;
+      font-size: 12px;
+
+    }
+
+    .botones {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1rem;
+    }
+
+    .btnOrador {
+      margin-right: 0.5rem;
+    }
+
+    .btnTickets {
+      margin-left: o.5rem;
+    }
+
+    /*-------------------Estilado Lugar y fecha para tablets----------*/
+    .lugarYfecha {
+      height: 100vh;
+      position: relative;
+    }
+
+    .carousel-item img {
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .columnaIzquierda {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+
+    }
+
+    .columnaDerecha {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      background-color: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+       
+      background: rgba(83, 74, 74, 0.73);
+      background: linear-gradient(90deg, rgba(83, 74, 74, 0.73) 0%, rgba(37, 35, 35, 0.52) 80%);
+      background: -webkit-linear-gradient(90deg, rgba(83, 74, 74, 0.73) 0%, rgba(37, 35, 35, 0.52) 80%);
+      background: -moz-linear-gradient(90deg, rgba(83, 74, 74, 0.73) 0%, rgba(37, 35, 35, 0.52) 80%);
+
+      font-size: 16px;
+    }
+
+    /*------------------EStilado para formulario para tablet----------------------*/
+
+    .formulario1 {
+      margin-top: 1rem;
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      text-align: center;
+
+    }
+    .navFooter ul {
+     text-align: center;
+     font-size:14px;
+     
+    }
+
+  }
