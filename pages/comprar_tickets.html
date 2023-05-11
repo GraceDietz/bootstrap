@@ -18,72 +18,88 @@
 </head>
 
 <body>
-    <header class="header">
-        <!--cabecera de la pagina con logo titulo y menu de navegacion-->
-        <div class="cajaHeader">
-            <div class="contenedorLogo">
-              <a href="#" ><img src="../assets/img/codoacodo.png" alt="logo"></a>
-              <h2>Conf Bs As</h2>
-        
-            </div>            
-            <nav class="navbar navbar-expand-xl navbar-dark bg-dark mr-5 px-3">      
-                <div class="container-fluid ">
-            
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!--<ul class="navbar-nav ms-auto mb-2 mb-lg-0">  --> 
-              <ul class="navbar-nav  ms-auto">
-                <ul class="navbar-nav ">
-                  <li class="nav-item">
-                    <a class="linkNav" href="../index.html#laConferencia">La Conferencia</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="linkNav" href="../index.html#losOradores">Los Oradores</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="linkNav" href="../index.html#lugarYfecha">El lugar y la fecha</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="linkNav" href="../index.html#convierteteEnOrador">Conviértete en Orador</a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="linkNavVerde " href="#">Comprar tickets</a>
-                  </li>
-                </ul>
-               
+  <header class="header">
+
+    <div class="cajaHeader container-fluid">
+        <div class="row d-flex align-items-center">
+            <div class="col-xl-2 text-right col-12 text-center">
+                <a href="#"><img src="../assets/img/codoacodo.png" class="imagenHeader" alt="logo"></a>
             </div>
-          </div>
-          </nav>
-           
-        
+            <div class="col-xl-2  col-12 text-center">
+                <h4 class="text-white">Conf Bs As</h4>
+            </div>
+            <div class="col-xl-8 col-12 ">
+
+
+                <nav class="navbar navbar-expand-xl navbar-dark bg-dark ">
+                    <div class="container-fluid ">
+                        <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ">
+                                <li class="nav-item">
+                                    <a class="linkNav" href="../index.html#laConferencia">La Conferencia</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="linkNav" href="../index.html#losOradores">Los Oradores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="linkNav" href="../index.html#lugarYfecha">El lugar y la fecha</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="linkNav" href="../index.html#convierteteEnOrador">Conviértete en Orador</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="linkNavVerde " href="#">Comprar tickets</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
-    <!--seccion la conferencia-->
+
+    </div>
+    <!--seccion la conferencia------------------------------------------------->
     <section id="laConferencia" class="laConfe">
 
-        <div class="confeBsAs">
+        <!-- Contenido del contenedor -->
 
-            <h1>Conf Bs As</h1>
+        <div class="laConferencia container">
+            <div class="row justify-content-sm-center justify-content-md-center justify-content-xl-end">
+                <div class="col-sm-12 w-60 pt-sm-1 col-md-12 w-60 pt-md-1 col-xl-6 w-60 pt-xl-5">
+                    <h4 class="h1LaConfe text-white text-sm-center text-md-center text-xl-end">Conf Bs As</h4>
+                    <p class="pLaConfe text-white text-sm-center text-md-center text-xl-end ">Bs As llega por
+                        primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y
+                        experiencia de los expertos que estan creado el futuro del internet. Ven a conocer a
+                        miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que
+                        tenemos para ti. Te esperamos!.</p>
+                </div>
 
-            <p>Bs As llega por primera vez a Argentina. Un evento para compartir con
-                nuestra comunidad el conocimiento y experiencia de los expertos que estan creado el futuro del
-                internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores
-                de
-                primer nivel que tenemos para ti. Te esperamos!.</p>
-            <div class="confeBsAsBotones">
+                <div class="row d-inline text-sm-center pt-sm-1 text-md-center pt-md-1 text-xl-end pt-xl-3">
+                    <a href="#convierteteEnOrador">
+                        <button type="button" class="btnOrador btn btn-outline-secondary btn-sm">
+                            Quiero ser Orador</button></a>
 
-               <a href="../index.html#convierteteEnOrador" class="btnOrador">Quiero ser orador</a>
-                <a href="#" class="btnTickets">Comprar tickets</a>
+
+                    <a href="#">
+                        <button type="button" class="btnTickets btn btn-success btn-sm"> Comprar
+                            tickets</button></a>
+
+                </div>
+
             </div>
-
         </div>
-
-
     </section>
-
     <!--fin seccion la conferencia-->
-    </header><!--fin de la cabecera de la pagina-->
+</header>
+<!--fin de la cabecera de la pagina-->
+
 
     <footer>
       <footer>

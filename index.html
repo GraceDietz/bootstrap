@@ -18,72 +18,86 @@
 </head>
 
 <body>
+
     <header class="header">
-        <div class="cajaHeader">
 
-            <div class="contenedorLogo">
-                <a href="#"><img src="./assets/img/codoacodo.png" alt="logo"></a>
-                <h2>Conf Bs As</h2>
+        <div class="cajaHeader container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-xl-2 text-right col-12 text-center">
+                    <a href="#"><img src="./assets/img/codoacodo.png" class="imagenHeader" alt="logo"></a>
+                </div>
+                <div class="col-xl-2  col-12 text-center">
+                    <h4 class="text-white">Conf Bs As</h4>
+                </div>
+                <div class="col-xl-8 col-12 ">
 
+
+                    <nav class="navbar navbar-expand-xl navbar-dark bg-dark ">
+                        <div class="container-fluid ">
+                            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+
+                                <ul class="navbar-nav ">
+                                    <li class="nav-item">
+                                        <a class="linkNav" href="#laConferencia">La Conferencia</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="linkNav" href="#losOradores">Los Oradores</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="linkNav" href="#lugarYfecha">El lugar y la fecha</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="linkNav" href="#convierteteEnOrador">Conviértete en Orador</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="linkNavVerde " href="./pages/comprar_tickets.html">Comprar tickets</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
-            
-            <nav class="navbar navbar-expand-xl navbar-dark bg-dark mr-5 px-3">      
-                <div class="container-fluid ">
-            
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!--<ul class="navbar-nav ms-auto mb-2 mb-lg-0">  --> 
-              <ul class="navbar-nav  ms-auto">
-                <ul class="navbar-nav ">
-                  <li class="nav-item">
-                    <a class="linkNav" href="#laConferencia">La Conferencia</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="linkNav" href="#losOradores">Los Oradores</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="linkNav" href="#lugarYfecha">El lugar y la fecha</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="linkNav" href="#convierteteEnOrador">Conviértete en Orador</a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="linkNavVerde " href="./pages/comprar_tickets.html">Comprar tickets</a>
-                  </li>
-                </ul>
-               
-            </div>
-          </div>
-          </nav>
+
         </div>
+        <!--seccion la conferencia------------------------------------------------->
+        <section id="laConferencia" class="laConfe">
 
-            
-           
-         
-            <!--seccion la conferencia------------------------------------------------->
-            <section id="laConferencia" class="laConfe">
+            <!-- imagen  -->
 
-                <div class="confeBsAs">
+            <div class="laConferencia container">
+                <div class="row justify-content-sm-center justify-content-md-center justify-content-xl-end align-items-end">
+                    <div class="col-sm-12  pt-sm-1 col-md-12  pt-md-1 col-xl-6 pt-xl-5">
+                        <h4 class="h1LaConfe text-white text-sm-center text-md-center text-xl-end">Conf Bs As</h4>
+                        <p class="pLaConfe text-white text-sm-center text-md-center text-xl-end ">Bs As llega por
+                            primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y
+                            experiencia de los expertos que estan creado el futuro del internet. Ven a conocer a
+                            miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que
+                            tenemos para ti. Te esperamos!.</p>
+                    </div>
 
-                    <h1>Conf Bs As</h1>
+                    <div class="row d-inline text-sm-center pt-sm-1 text-md-center pt-md-1 text-xl-end pt-xl-3">
+                        <a href="#convierteteEnOrador">
+                            <button type="button" class="btnOrador btn btn-outline-secondary btn-sm">
+                                Quiero ser Orador</button></a>
 
-                    <p>Bs As llega por primera vez a Argentina. Un evento para compartir con
-                        nuestra comunidad el conocimiento y experiencia de los expertos que estan creado el futuro del
-                        internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores
-                        de
-                        primer nivel que tenemos para ti. Te esperamos!.</p>
-                    <div class="confeBsAsBotones">
-                        <a href="#convierteteEnOrador" class="btnOrador">Quiero ser orador</a>
-                        <a href="./pages/comprar_tickets.html" class="btnTickets">Comprar tickets</a>
+
+                        <a href="./pages/comprar_tickets.html">
+                            <button type="button" class="btnTickets btn btn-success btn-sm"> Comprar
+                                tickets</button></a>
+
                     </div>
 
                 </div>
-
-
-            </section>
-            <!--fin seccion la conferencia-->
+            </div>
+        </section>
+        <!--fin seccion la conferencia-->
     </header>
     <!--fin de la cabecera de la pagina-->
 
@@ -91,19 +105,14 @@
 
         <!--Aca van las cards de cada orador con descripcion de cada uno-->
         <section id="losOradores" class="Oradores container">
-
             <h2><span class="h2conoce">CONOCE A LOS </span><br><span class="h2oradores">ORADORES</span></h2>
-
-
             <div class="contenedorGrid row justify-content-center">
-
                 <div class="gridCard col-xl-4 col-sm-12">
-
-
                     <div class="card w-100 h-100">
                         <img src="./assets/img/steverecortado.jpg" class="card-img-top w-auto" alt="foto Steve Jobs">
                         <div class="card-body">
-                            <h4><span class="java">Java script</span><span class="react"> React</span></h4>
+                            <button type="button" class="btn btn-info btn-sm" disable>Java script</button>
+                            <button type="button" class="btn btn-warning btn-sm" disable>React</button>
                             <h5>Steve Jobs</h5>
                             <p>
                                 Padre del primer ordenador personal y fundador de Apple Computer, probablemente la
@@ -117,33 +126,25 @@
                                 hábitos de
                                 millones de personas durante más de tres décadas.
                             </p>
-
-
                         </div>
                     </div>
-
-
-
                 </div>
-
-
                 <div class="gridCard col-xl-4 col-sm-12">
 
                     <div class="card w-100 h-100">
                         <img src="./assets/img/billrecortado.jpg" class="card-img-top w-auto" alt="Foto Bill Gates">
                         <div class="card-body">
-                            <h4><span class="java">Java script</span><span class="react"> React</span></h4>
-
+                            <button type="button" class="btn btn-info btn-sm" disable>Java script</button>
+                            <button type="button" class="btn btn-warning btn-sm" disable>React</button>
                             <h5>Bill Gates</h5>
-                            <p>El talento de Gates se ha reflejado en múltiples programas informáticos, cuyo uso se ha
+                            <p>
+                                El talento de Gates se ha reflejado en múltiples programas informáticos, cuyo uso se ha
                                 difundido
                                 por todo el mundo como lenguajes básicos de los ordenadores personales; pero también en
-                                el éxito
-                                de una empresa flexible y competitiva, gestionada con criterios heterodoxos y con una
-                                atención
-                                especial a la selección y motivación del personal. Las innovaciones de Gates
-                                contribuyeron a la
-                                rápida difusión del uso de la informática personal.</p>
+                                el éxito de una empresa flexible y competitiva, gestionada con criterios heterodoxos y
+                                con una
+                                atención especial a la selección y motivación del personal. Las innovaciones de Gates
+                                contribuyeron a la rápida difusión del uso de la informática personal.</p>
 
                         </div>
                     </div>
@@ -153,19 +154,19 @@
                     <div class="card w-100 h-100">
                         <img src="./assets/img/adarecortada.jpg" class="card-img-top w-auto" alt="foto de Ada Lovelace">
                         <div class="card-body">
-                            <h4><span class="negocios">Negocios</span><span class="start"> Startups</span></h4>
+                            <button type="button" class="btn btn-secondary btn-sm" disable>Negocios</button>
+                            <button type="button" class="btn btn-danger btn-sm" disable>Startups</button>
                             <h5>Ada Lovelace</h5>
-                            <p>Ada Lovelace es considerada por muchos la primera programadora de la historia. Matemática
-                                y
-                                escritora inglesa, hija del famoso poeta Lord Byron, revolucionó la ciencia con sus
-                                conocimientos matemáticos ideando, con el apoyo de sus amigos inventores, el primer
-                                programa
-                                informático. Lo más increíble de su historia, es que lo diseño cuando aún no existían
-                                los
-                                ordenadores.
+                            <p>
+                                Ada Lovelace es considerada por muchos la primera programadora de la historia.
+                                Matemática y escritora inglesa, hija del famoso poeta Lord Byron, revolucionó la ciencia
+                                con sus conocimientos matemáticos ideando, con el apoyo de sus amigos inventores, el
+                                primer
+                                programa informático. Lo más increíble de su historia, es que lo diseño cuando aún no
+                                existían los ordenadores.
                                 Cuando Ada vio por primera vez una máquina analítica, la antecesora de los ordenadores
-                                modernos,
-                                tuvo claro que quería trabajar con su creador, el científico Charles Babbage.</p>
+                                modernos, tuvo claro que quería trabajar con su creador, el científico Charles Babbage.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -182,26 +183,23 @@
             <div class="row">
 
                 <div class="col-sm-12 col-xl-6 columnaIzquierda">
-                  
+
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="./assets/img/casarosada.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./assets/img/teatrocolon.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./assets/img/malbarecortado.jpg" class="d-block w-100" alt="...">
-                          </div>
+                            <div class="carousel-item active">
+                                <img src="./assets/img/casarosada.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/teatrocolon.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/malbarecortado.jpg" class="d-block w-100" alt="...">
+                            </div>
                         </div>
-                      </div>
-                  
-                  
-                  
-                    <!--aca va la imagen en el css-->
+                    </div>
+
                 </div>
-                <div class="col-sm-12 col-xl-6  columnaDerecha">
+                <div class="col-sm-12 pt-sm-1 col-xl-6 pt-xl-2 columnaDerecha">
                     <h3> Bs As - Octubre</h3>
 
                     <p>Buenos Aires es la gran capital cosmopolita de Argentina. Posee imponentes edificios del siglo
@@ -211,7 +209,11 @@
                         diversa índole ,en muchas ocasiones junto a otros museos alrededor del mundo, colecciones
                         internacionales y muestras de arte argentino y latinoamericano.
                     </p>
-                    <a href="#lugarYfecha" class="btnconoceMas">Conoce más</a>
+                    <a href="#lugarYfecha">
+                        <button type="button" class="btnConoceMas btn btn-outline-secondary btn-sm">
+                            Conoce más</button></a>
+
+
                 </div>
 
             </div>
@@ -258,7 +260,8 @@
                 <li class="col-sm-12 col-xl-2"><a class="linkNavFooter" href="#">Contáctanos</a></li>
                 <li class="col-sm-12 col-xl-1"><a class="linkNavFooter" href="#">Prensa</a></li>
                 <li class="col-sm-12 col-xl-2"><a class="linkNavFooter" href="#">Conferencias</a></li>
-                <li class="col-sm-12 col-xl-2 d-block"><a class="linkNavFooter " href="#">Términos y condiciones</a></li>
+                <li class="col-sm-12 col-xl-2 d-block"><a class="linkNavFooter " href="#">Términos y condiciones</a>
+                </li>
                 <li class="col-sm-12 col-xl-2"><a class="linkNavFooter" href="#">Privacidad</a></li>
                 <li class="col-sm-12 col-xl-1"><a class="linkNavFooter" href="#">Estudiantes</a></li>
 
