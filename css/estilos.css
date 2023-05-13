@@ -94,7 +94,9 @@ h6 {
  
 }
 .laConferencia{
- padding-top:150px;
+ 
+ height: 90vh;
+ padding-top:130px;
 }
 
 /*estilado boton queres ser orador */
