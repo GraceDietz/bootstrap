@@ -346,17 +346,17 @@ h6 {
   /*--------------------estilado de section lugay y fecha para celular------*/
 
   .lugarYfecha {
-    height: 100vh;
+    height: 90vh;
     position: relative;
   }
     .carousel-item img {
-      height: 100vh;
+      height: 90vh;
       object-fit: cover;
     }
 
     .columnaIzquierda {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -366,7 +366,7 @@ h6 {
 
     .columnaDerecha {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       position: absolute;
       background-color: transparent;
       top: 50%;
@@ -427,18 +427,18 @@ h6 {
   
     /*-------------------Estilado Lugar y fecha para tablets----------*/
     .lugarYfecha {
-      height: 100vh;
+      height: 90vh;
       position: relative;
     }
 
     .carousel-item img {
-      height: 100vh;
+      height: 90vh;
       object-fit: cover;
     }
 
     .columnaIzquierda {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -448,7 +448,7 @@ h6 {
 
     .columnaDerecha {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       position: absolute;
       background-color: transparent;
       top: 50%;
