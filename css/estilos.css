@@ -168,22 +168,19 @@ h6 {
 
 }
 
-.gridCard h4 {
 
-  margin-top: 1rem;
-}
 
 .gridCard h5 {
   font-weight: 500;
   font-size: 15px;
-  margin-left: 1rem;
   padding-top: 0.5rem;
 
 
 }
 
 .gridCard p {
-  margin: 0.5rem 1rem;
+  /*
+  margin-top:1rem;*/
   color: grey;
   font-size: 12px;
 
