@@ -1,4 +1,6 @@
-//hago la carga desde el dom
+//hago la carga 
+
+
 const formulario=document.querySelector("#form");
 console.log(formulario);
 const nombre=document.getElementById("input_nombre");
@@ -8,57 +10,67 @@ const cantidad=document.getElementById("input-cantidad");
 const option=document.getElementById("categoria");
 const totalAPagar=document.getElementById("totalpagar");
 const boton = document.getElementById("resumen");
+const borrar=document.getElementById("borrar");
 
+
+borrar.addEventListener('click',limpiar);
+ 
 boton.addEventListener('click',Calcular) ;
+
+//funcion calcula pagar
 function Calcular(){
-	//e.preventDefault();
+	
     alert("¡Hiciste clic en el botón!");
 	checkInputs();
     const cantidadcomprar=parseInt(cantidad.value);
     const categoriaPago=option.value;
     let sonpesos=calcularMontoTotal(categoriaPago, cantidadcomprar);
-    alert("son pesos    "+sonpesos);
+   
+   
     const pagar=document.getElementById("totalPagar");
     pagar.setAttribute("placeholder",(`Total a pagar : \$ ${sonpesos}`));
     
    
 };
 
-/*
-// Seleccionar el botón y agregar un evento de clic
-const botonCalcular = document.getElementById('calcular-total');
-botonCalcular.addEventListener('click', function() {
-  // Obtener los valores ingresados por el usuario
-  const cantidad = parseInt(document.getElementById('cantidad').value);
-  const opcion = parseInt(document.getElementById('opcion').value);
+//funcion para guardar los placeolder 
+function guardarPlace(){
+    const miFormulario = document.getElementById('form');
+    const inputs = miFormulario.getElementsByTagName('input');
+     place=[];
+        for (let i = 0; i < inputs.length; i++) {
+        place[i]=inputs[i].getAttribute('data-placeholder');
+             
+        console.log("aca v a cada input   " + place[i] +" "+inputs[i]);
+               
+       
+      }
+      
+    }; 
 
-  // Realizar el cálculo en función de la opción seleccionada
-  let total = 0;
-  switch (opcion) {
-    case 0:
-      total = cantidad * 100;
-      break;
-    case 1:
-      total = cantidad * 150;
-      break;
-    case 2:
-      total = cantidad * 200;
-      break;
-    case 4:
-      total = cantidad * 250;
-      break;
-  }
+    //Funcionn para limpiar los inputs y que tengan los placeholder
+function limpiar(){
+    alert("entro a funcion borrar");
+    const miFormulario = document.getElementById('form');
+    const inputs = miFormulario.getElementsByTagName('input');
+    console.log("Dentro de funcion limpiar");
+    console.log(inputs);
+    for (let i = 0; i < inputs.length; i++) {
+      const input = inputs[i];
+      const placeholder = input.getAttribute('data-placeholder');
+      console.log(placeholder);
+      input.setAttribute('placeholder', placeholder);
 
-  // Mostrar el total en la página
-  document.getElementById('total').textContent = total;
-});
-
-
-
-
-*/
+//comprobando el nuevo atributo
+        
+         const nuevoPlaceholder = input.getAttribute('placeholder');
+        console.log(nuevoPlaceholder);
+      
+    }
+};
+//funcion para chequear los inputs y envia mensaje por alert
 function checkInputs() {
-	// trim saca los espacios en blanco
+	
 	const nombreValue = nombre.value;
     const apellidoValue = apellido.value;
 	const emailValue = email.value;
@@ -86,7 +98,7 @@ function checkInputs() {
 	} ;
 	
 };
-// funcion para calcular el monto a pagar segun categorias
+// funcion para calcular el monto a pagar segun categorias retorna monto calculado
 function calcularMontoTotal(option, cantidadcompra) {
     let suPagoEs = 0;
     
@@ -113,17 +125,17 @@ function calcularMontoTotal(option, cantidadcompra) {
             break;
 
     }
-       alert("saliendo del case retornando valor..."+suPagoEs);
+       
       return suPagoEs;
 };
 
-
+//Funcio para validar nombre y apellido
 
 function validarString(inputString) {
     const regex = /^[a-zA-Z]+$/;
     return regex.test(inputString);
 };
-
+//Funcion de validacion del mail 
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 };
@@ -132,35 +144,7 @@ function isEmail(email) {
 
 
 
-/*
-boton.addEventListener("click", function (event) {
 
-    event.preventDefault();
-
-    alert("¡Hiciste clic en el botón!")
-
-    const inputname = document.getElementById("input_nombre");
-    inputname.addEventListener("input" ,(event)=>{
-        alert("Entro en la callback");
-        const placeholdername = inputname.getAttribute("placeholder");
-    
-        const name=inputname.value;
-            
-          
-          let valido = validarString(name);
-          if (!valido) {
-            alert("Ingrese un nombre válido");
-            inputname.setAttribute("placeholder", placeholdername);
-            inputname.focus();
-            inputname.value = "";
-            event.preventDefault();
-          };
-        });
-        
-
-    
-    
-    
     
 
 
@@ -170,29 +154,7 @@ boton.addEventListener("click", function (event) {
 
 
    
-    const inputapellido = document.getElementById("input_apellido");
-    const lastname = inputapellido.value;
-    const inputcantidad = document.getElementById("cantidad");
-    const cantidadcompra = inputcantidad.value;
-    const inputopcion = document.getElementById("opciones");
-    const option = inputopcion.value;
-    const totalAPagar = document.getElementById("totalPagar");
-    //obtenemos los valores de cantidad y opciones para hacer los calculos
-
-    totalAPagar.value = "Total a pagar : $" + calcularMontoTotal(option, cantidadcompra);
-    alert("el total calculado a pagar es :  " + totalAPagar.value);
-});
-
-
-
-
-*/
-
-
-
-
- 
-                                       
+              
 
 
 
