@@ -127,19 +127,19 @@
      <form id="form" action="#" autocomplete="off">
         <div class="row g-3">
             <div class="col-lg-6 col-sm-12">
- <input id="input_nombre" type="text" class="form-control" placeholder="Nombre" data-placeholder="Nombre" required autocomplete="off">
+ <input id="input_nombre" type="text" class="form-control" placeholder="Nombre"  required autocomplete="off">
                 
           
             </div>
             <div class="col-lg-6 col-sm-12">
-                <input id="input_apellido" type="text" class="form-control" placeholder="Apellido" data-placeholder="Apellido" required  autocomplete="off">
+                <input id="input_apellido" type="text" class="form-control" placeholder="Apellido"  required  autocomplete="off">
                 
           
             </div>
         </div>
         
            <div class="col-12 mt-3 ">
-            <input type="email"  id="input_email" class="form-control" placeholder="Correo" data-placeholder="email" required autocomplete="off" >
+            <input type="email"  id="input_email" class="form-control" placeholder="Correo"  required autocomplete="off" >
             
           </div>
        
@@ -147,7 +147,7 @@
             <div class="col">
               <div class="form-group mt-3">
                 <label for="cantidad">Cantidad</label>
-                <input  type="number"  id="input-cantidad"  placeholder="Cantidad" data-placeholder="Cantidad" class="form-control" required min="1" max="10"  autocomplete="on">
+                <input  type="number"  id="input-cantidad"  placeholder="Cantidad"  class="form-control" required min="1" max="10"  autocomplete="on">
                 
             </div>
             </div>
@@ -168,21 +168,21 @@
               </div>
             </div>
             <div class="container">
-                <input  type="text" class="form-control mt-3" id="totalPagar" placeholder="Total a pagar :$ " data-placeholder="Total a pagar :$" readonly  autocomplete="off">
+                <input id="totalPagar" type="text" class="form-control mt-3"  placeholder="Total a pagar :$ "  readonly >
 
               </div>
 
             <div class="container d-flex  justify-content-center">
             </div class="row g-3 "  >
             <div class="col-lg-6 col-sm-12">
-                <button id="borrar" type="submit" class="btnVerde mt-3">Borrar</button>  
-         <!--   <input id="borrar" type="submit" class="btnVerde mt-3" value="Borrar">-->
+             <button id="borrar" type="button" class="btnVerde mt-3">Borrar</button>  
+         
             </div>
             <div class="col-lg-6 col-sm-12">
+<!-- se le asigno type button al boton resumen pq no esta vinculado a ninguna tabla para guardar o enviar los datos-->
+             <button id="resumen" type="button" class="btnVerde mt-3">Resumen</button>
 
-             <button id="resumen" type="submit" class="btnVerde mt-3">Resumen</button>
-
-          <!--  <input id="resumen" type="submit" class="btnVerde mt-3" value="Resumen">-->
+        
             </div>
               </div>
             </div>

@@ -13,10 +13,10 @@ const boton = document.getElementById("resumen");
 const borrar=document.getElementById("borrar");
 
 
-borrar.addEventListener('click',limpiar);
+
  
 boton.addEventListener('click',Calcular) ;
-
+borrar.addEventListener('click', borrarCampos);
 //funcion calcula pagar
 function Calcular(){
 	
@@ -33,68 +33,45 @@ function Calcular(){
    
 };
 
-//funcion para guardar los placeolder 
-function guardarPlace(){
-    const miFormulario = document.getElementById('form');
-    const inputs = miFormulario.getElementsByTagName('input');
-     place=[];
-        for (let i = 0; i < inputs.length; i++) {
-        place[i]=inputs[i].getAttribute('data-placeholder');
-             
-        console.log("aca v a cada input   " + place[i] +" "+inputs[i]);
-               
+
+
+    //Funcion limpiar formulario
+function borrarCampos() {
        
-      }
-      
-    }; 
+        document.getElementById('form').reset();
 
-    //Funcionn para limpiar los inputs y que tengan los placeholder
-function limpiar(){
-    alert("entro a funcion borrar");
-    const miFormulario = document.getElementById('form');
-    const inputs = miFormulario.getElementsByTagName('input');
-    console.log("Dentro de funcion limpiar");
-    console.log(inputs);
-    for (let i = 0; i < inputs.length; i++) {
-      const input = inputs[i];
-      const placeholder = input.getAttribute('data-placeholder');
-      console.log(placeholder);
-      input.setAttribute('placeholder', placeholder);
+        console.log("entra en borrar campos");
 
-//comprobando el nuevo atributo
+      document.getElementById('totalPagar').value="Total a pagar : $ ";
+
         
-         const nuevoPlaceholder = input.getAttribute('placeholder');
-        console.log(nuevoPlaceholder);
       
-    }
-};
-//funcion para chequear los inputs y envia mensaje por alert
+    };
+   
+
+//funcion para chequear los inputs y enviar mensaje de alert
 function checkInputs() {
 	
 	const nombreValue = nombre.value;
     const apellidoValue = apellido.value;
 	const emailValue = email.value;
-	const cantidadcompra=cantidad;
-
+	const cantidadcompra=parseInt(cantidad);
+   
 	
-	if(nombreValue === '') {
-		alert( 'Debe Ingresar un nombre valido');
-	} else if (!validarString(nombreValue)){
-        alert( 'No ingreso un nombre válido');}
-       	
-	if(apellidoValue === '') {
-		alert('Debe Ingresar un apellido valido');
-	} else if (!validarString(apellidoValue)){
-        alert( 'No ingreso un apellido válido');}
+	if(nombreValue === ''||(!validarString(nombreValue))) {
+		alert( 'Debe ingresar un nombre valido');
+	} ;       	
+	if(apellidoValue === ''||(!validarString(apellidoValue))) {
+		alert('Debe ingresar un apellido valido');
+    };
         
-	if(emailValue === '') {
-		alert('No puede dejar el email en blanco');
-	} else if (!isEmail(emailValue)) {
-		alert('No ingreso un email válido');
-	} 
-	
-	if(cantidadcompra === '') {
-		alert( 'Ingrese una cantidad ');
+	if(emailValue === ''|| (!isEmail(emailValue))) {
+        alert('Debe ingresar un email válido');
+    };
+		
+	if(cantidadcompra === ''|| (cantidadcompra<0)) {
+		alert( 'Ingrese una cantidad válida ')
+        cantidadcompra=0;
 	} ;
 	
 };
