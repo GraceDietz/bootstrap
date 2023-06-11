@@ -89,13 +89,13 @@ function Calcular() {
 
   // calcular el total a pagar
   cantidadcomprar = parseInt(cantidad.value);
+  cantidadcompra=parseInt(cantidad.value);
   categoriaPago = parseInt(option.value);
- 
+  
   sonpesos = calcularMontoTotal(categoriaPago, cantidadcomprar);
  
-  totalAPagar.setAttribute("placeholder", (`Total a pagar : \$ ${sonpesos}`));
+  totalAPagar.value=("Total a pagar : $" + sonpesos);
   
-
 };
 
 
@@ -110,13 +110,14 @@ function chekinputs() {
   apellidoValue = apellido.value;
   emailValue = email.value;
   cantidadcompra = cantidad.value;
+  cantidadcomprar=cantidad.value;
   categoriaPago = parseInt(option.value);
  
   if ((!validarString(nombreValue))) {
 
    
     alert('Debe ingresar un nombre válido');
-   
+    
     nombre.focus();
     return;
      } ;
@@ -134,7 +135,7 @@ function chekinputs() {
   if ((!isEmail(emailValue))) {
     
     alert('Debe ingresar un email válido');
-   
+  
     email.focus();
     return;
     
@@ -153,7 +154,7 @@ function chekinputs() {
   };
 if(categoriaPago<0||categoriaPago>3){
   alert('Debe seleccionar una categoría');
-  
+  categoriaPago=9;
   option.focus();
   return;
 };
@@ -189,27 +190,33 @@ function calcularMontoTotal(categoriaPago, cantidadcompra) {
     //otro sin descuentos
     case 0:
       suPagoEs = cantidadcompra * 200;
+
+     
       break;
     //EStudiante dto del 80%
     case 1:
       suPagoEs = (cantidadcompra * 200) - (cantidadcompra * 200 * 0.8);
+     
       break;
     //Trainne dto del 50%        
     case 2:
       suPagoEs = (cantidadcompra * 200) - (cantidadcompra * 200 * 0.5);
+     
       break;
     // Junior dto del 15%        
     case 3:
       suPagoEs = (cantidadcompra * 200) - (cantidadcompra * 200 * 0.15);
-
+     
       break;
     default:
       cantidadcompra=1;
       cantidadcomprar=1;
       suPagoEs = 0;
+     
       break;
 
   }
+  
   return(suPagoEs);
 };
 
